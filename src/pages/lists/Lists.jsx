@@ -11,10 +11,10 @@ export default function Lists(){
 
 
     const location = useLocation();
-    const [destination,setDestiantion] = useState(location.state.destination);
+    const [destination] = useState(location.state.destination);
     const [date,setDate] = useState(location.state.date);
     const [openDate, setOpenDate] = useState(false);
-    const [options,setOptions] = useState(location.state.options)
+    const [options] = useState(location.state.options)
     return (
         <div>
             <Navbar/>
