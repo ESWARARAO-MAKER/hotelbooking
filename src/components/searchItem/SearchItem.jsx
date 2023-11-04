@@ -1,5 +1,6 @@
 import React from "react";
 import "./searchItem.css";
+import { Link } from "react-router-dom";
 
 export default function SearchItem(){
     return (
@@ -22,7 +23,9 @@ export default function SearchItem(){
                 <div className="siDetailsTexts">
                     <span className="siPrice">$123</span>
                     <span className="siTaxOp">Includes taxes and fees</span>
-                    <button className="siCheckButton">See availability</button>
+                    <Link to="/hotels/:id">
+                        <button className="siCheckButton">See availability</button>
+                    </Link>
                 </div>
             </div>
         </div>
