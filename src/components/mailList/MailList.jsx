@@ -1,15 +1,16 @@
-import React from "react";
-import "./mailList.css";
+import "./mailList.css"
 
-export default function MailList(){
-    return (
-        <div className="mail">
-            <h1 className="mailTitle">Save Time, Save Money!</h1>
-            <span className="mailDesc">Signup and we'll send the best deals to you</span>
-            <div className="mailInputContainer">
-                <input type="text" placeholder="Your mail"/>
-                <button className="subscribeBtn">Subscribe</button>
-            </div>
-        </div>
-    )
+const MailList = () => {
+  return (
+    <div className="mail">
+      <h1 className="mailTitle">Save time, save money!</h1>
+      <span className="mailDesc">Sign up and we'll send the best deals to you</span>
+      <div className="mailInputContainer">
+        <input type="text" placeholder="Your Email" />
+        <button>Subscribe</button>
+      </div>
+    </div>
+  )
 }
+
+export default MailList
