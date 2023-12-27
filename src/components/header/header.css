@@ -150,6 +150,7 @@
     .headerSearch{
       overflow-x: auto;
       height: 100px;
+      padding: 10px;
     }
     .headerSearchItem{
       margin-left: 10px;
