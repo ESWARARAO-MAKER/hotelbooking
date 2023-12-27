@@ -150,10 +150,9 @@
     .headerSearch{
       overflow-x: auto;
       height: 100px;
-      display: flex;
     }
     .headerSearchItem{
-      margin: 10px;
+      margin-left: 10px;
     }
     .headerList::-webkit-scrollbar{
       display: none;

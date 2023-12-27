@@ -48,4 +48,8 @@
   .fpCity,.fpName,.fpRating{
     font-size: 16px;
   }
+  .fpImg{
+    width: 200px;
+    height: 200px;
+  }
 }

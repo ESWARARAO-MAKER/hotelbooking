@@ -35,4 +35,7 @@
     .featuredTitles>h1,h2{
       font-size: 18px;
     }
+    .featuredTitles{
+      left: 15px;
+    }
   }

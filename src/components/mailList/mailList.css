@@ -33,4 +33,10 @@
     .mail{
       padding: 10px;
     }
+    .mailInputContainer>input{
+      width: 200px;
+    }
+    .mailTitle{
+      font-size: 22px;
+    }
   }
