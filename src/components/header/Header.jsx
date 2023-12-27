@@ -95,11 +95,10 @@ import {
           {type !== "list" && (
             <>
               <h1 className="headerTitle">
-                A lifetime of discounts? It's Genius.
+                Find Your Next Stay.
               </h1>
               <p className="headerDesc">
-                Get rewarded for your travels – unlock instant savings of 10% or
-                more with a free Lamabooking account
+                Search low prices on hotels, homes and much more...
               </p>
               {!user && <button className="headerBtn" onClick={onSignButton}>Sign in / Register</button>}
               <div className="headerSearch">

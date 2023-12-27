@@ -1,5 +1,7 @@
 .header {
-    background-color: #003580;
+    /* background-color: #003580; */
+    background-image: url("https://t3.ftcdn.net/jpg/00/86/56/12/360_F_86561234_8HJdzg2iBlPap18K38mbyetKfdw1oNrm.jpg");
+    background-size: cover;
     color: white;
     display: flex;
     justify-content: center;
@@ -37,18 +39,25 @@
     padding: 10px;
     border-radius: 20px;
   }
+  .headerTitle{
+    font-weight: 800;
+  }
   
   .headerDesc {
     margin: 20px 0px;
+    font-size: 16px;
   }
   
   .headerBtn {
-    background-color: #0071c2;
-    color: white;
+    background-color: #ffffff;
+    color: #0071c2;
     font-weight: 500;
     border: none;
     padding: 10px;
     cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #0071c2;
   }
   .headerBtn:hover{
     scale: 1.2;
