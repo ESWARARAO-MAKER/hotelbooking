@@ -166,6 +166,7 @@
     }
     .headerListItem{
       margin: 10px;
+      gap: 2px;
     }
     .headerDesc{
       margin: 10px;
