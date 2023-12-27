@@ -37,9 +37,14 @@ import {
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
 
+    const onDirectTo = () => {
+      navigate("/working");
+    }
+
     const onSignButton = () => {
       navigate("/login");
     }
+
   
   
     const handleOption = (name, operation) => {
@@ -72,19 +77,19 @@ import {
             </div>
             <div className="headerListItem">
               <FontAwesomeIcon icon={faPlane} />
-              <span>Flights</span>
+              <span onClick={onDirectTo}>Flights</span>
             </div>
             <div className="headerListItem">
               <FontAwesomeIcon icon={faCar} />
-              <span>Car rentals</span>
+              <span onClick={onDirectTo}>Car rentals</span>
             </div>
             <div className="headerListItem">
               <FontAwesomeIcon icon={faBed} />
-              <span>Attractions</span>
+              <span onClick={onDirectTo}>Attractions</span>
             </div>
             <div className="headerListItem">
               <FontAwesomeIcon icon={faTaxi} />
-              <span>Airport taxis</span>
+              <span onClick={onDirectTo}>Airport taxis</span>
             </div>
           </div>
           {type !== "list" && (

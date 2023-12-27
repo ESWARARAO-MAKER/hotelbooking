@@ -1,6 +1,6 @@
 import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import { AuthContext } from "../../context/AuthContext";
 
 
@@ -15,7 +15,15 @@ const Navbar = () => {
   const onLogout = () => {
     // deleteCookie(access_token);
     localStorage.clear();
-    navigate("/");
+    navigate("/login");
+  }
+
+  const onLogin = () => {
+    navigate("/login")
+  }
+
+  const onRegister = () => {
+    navigate("/register")
   }
 
   return (
@@ -30,9 +38,9 @@ const Navbar = () => {
           <button className="navButton" onClick={onLogout}>Logout</button>
         </div>) : (
           <div className="navItems">
-            <button className="navButton">Register</button>
+            <button className="navButton" onClick={onRegister}>Register</button>
             <Link to = "/login">
-              <button className="navButton">Login</button>
+              <button className="navButton" onClick={onLogin}>Login</button>
             </Link>
           </div>
           

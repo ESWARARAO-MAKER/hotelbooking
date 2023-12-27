@@ -27,6 +27,11 @@
     align-items: center;
     gap: 10px;
   }
+
+  .headerListItem>span:hover{
+    cursor: pointer;
+    scale: 1.2;
+  }
   
   .headerListItem.active {
     border: 1px solid white;

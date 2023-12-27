@@ -14,6 +14,10 @@ const Login = () => {
 
   const navigate = useNavigate()
 
+  const onRegister = () => {
+    navigate("/register")
+  }
+
   const handleChange = (e) => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
@@ -51,6 +55,7 @@ const Login = () => {
         <button disabled={loading} onClick={handleClick} className="lButton">
           Login
         </button>
+        <p>don't have an account? <span className="register" onClick={onRegister}>Register</span></p>
         {error && <span>{error.message}</span>}
       </div>
     </div>
