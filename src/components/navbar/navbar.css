@@ -15,7 +15,14 @@
   }
   
   .logo{
-    font-weight: 500;
+    font-weight: 800;
+    font-size: 18px;
+    color: white;
+  }
+  .logo>span{
+    font-weight: 800;
+    font-size: 22px;
+    color: white;
   }
   
   .navButton{
@@ -28,4 +35,7 @@
   .login-username{
     color: white;
     font-size: 22px;
+  }
+  .navButton:hover{
+    scale: 1.2;
   }
