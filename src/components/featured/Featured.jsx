@@ -7,6 +7,8 @@ const Featured = () => {
   );
 
   return (
+    <>
+    <h1 className="trending-text">Most Trending Cities</h1>
     <div className="featured">
       {loading ? (
         "Loading please wait"
@@ -49,6 +51,7 @@ const Featured = () => {
         </>
       )}
     </div>
+    </>
   );
 };
 

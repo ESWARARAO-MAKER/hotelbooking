@@ -44,3 +44,8 @@
   .fpRating>span{
     font-size: 14px;
   }
+@media screen and (max-width :767px) {
+  .fpCity,.fpName,.fpRating{
+    font-size: 16px;
+  }
+}

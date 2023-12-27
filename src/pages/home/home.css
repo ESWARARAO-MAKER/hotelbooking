@@ -9,4 +9,11 @@
   .homeTitle{
     width: 1024px;
     font-size: 20px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 767px) {
+      .homeTitle{
+        width: auto;
+      }
   }

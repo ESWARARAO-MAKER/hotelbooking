@@ -39,3 +39,9 @@
   .navButton:hover{
     scale: 1.2;
   }
+
+  @media screen and (max-width :767px) {
+    .navContainer{
+      padding: 10px;
+    }
+  }

@@ -142,3 +142,42 @@
   .optionCounterButton:disabled {
     cursor: not-allowed;
   }
+
+  @media screen and (max-width: 767px) {
+    .headerSearch::-webkit-scrollbar{
+      display: none;
+    }
+    .headerSearch{
+      overflow-x: auto;
+      height: 100px;
+      display: flex;
+    }
+    .headerSearchItem{
+      margin: 10px;
+    }
+    .headerList::-webkit-scrollbar{
+      display: none;
+    }
+    .headerList{
+      overflow-x: auto;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+      margin-bottom: 10px;
+    }
+    .headerListItem{
+      margin: 10px;
+    }
+    .headerDesc{
+      margin: 10px;
+    }
+    .headerTitle{
+      margin: 10px;
+    }
+    .headerBtn{
+      height: 35px;
+      padding: 5px;
+      font-size: 14px;
+      margin: 10px;
+    }
+
+  }
