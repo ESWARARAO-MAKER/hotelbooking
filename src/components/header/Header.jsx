@@ -75,21 +75,21 @@ import {
               <FontAwesomeIcon icon={faBed} />
               <span>Stays</span>
             </div>
-            <div className="headerListItem">
+            <div className="headerListItem" onClick={onDirectTo}>
               <FontAwesomeIcon icon={faPlane} />
-              <span onClick={onDirectTo}>Flights</span>
+              <span>Flights</span>
             </div>
-            <div className="headerListItem">
+            <div className="headerListItem" onClick={onDirectTo}>
               <FontAwesomeIcon icon={faCar} />
-              <span onClick={onDirectTo}>Car rentals</span>
+              <span>Car rentals</span>
             </div>
-            <div className="headerListItem">
+            <div className="headerListItem" onClick={onDirectTo}>
               <FontAwesomeIcon icon={faBed} />
-              <span onClick={onDirectTo}>Attractions</span>
+              <span>Attractions</span>
             </div>
-            <div className="headerListItem">
+            <div className="headerListItem" onClick={onDirectTo}>
               <FontAwesomeIcon icon={faTaxi} />
-              <span onClick={onDirectTo}>Airport taxis</span>
+              <span>Airport taxis</span>
             </div>
           </div>
           {type !== "list" && (

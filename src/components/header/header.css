@@ -27,8 +27,7 @@
     align-items: center;
     gap: 10px;
   }
-
-  .headerListItem>span:hover{
+  .headerListItem:hover{
     cursor: pointer;
     scale: 1.2;
   }
