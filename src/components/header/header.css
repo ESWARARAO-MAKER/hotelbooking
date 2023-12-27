@@ -150,8 +150,6 @@
     .headerSearch{
       overflow-x: auto;
       height: 100px;
-      display: flex;
-      justify-content: space-around;
     }
     .headerSearchItem{
       margin: 10px;
