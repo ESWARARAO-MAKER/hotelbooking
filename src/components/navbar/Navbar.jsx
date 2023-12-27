@@ -2,11 +2,18 @@ import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
+
+
 const Navbar = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate()
 
+  // const deleteCookie = (cookieName) => {
+  //   document.cookie = `${cookieName}=; path=/;`
+  // }
+
   const onLogout = () => {
+    // deleteCookie(access_token);
     localStorage.clear();
     navigate("/");
   }
