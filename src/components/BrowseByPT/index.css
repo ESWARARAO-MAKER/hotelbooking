@@ -1,0 +1,31 @@
+.bpt{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.bpt-container{
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    width: 100%;
+    max-width: 1024px;
+    margin: 10px;
+}
+.property-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 200px;
+    min-width: 200px;
+}
+.property-container>img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 790px) {
+    .property-container{
+        min-width: 150px;
+    }
+}

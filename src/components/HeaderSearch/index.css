@@ -1,0 +1,129 @@
+
+.header-and-search{
+    width: 100%;
+    height: 100%;
+    background-color: #003b95;
+}
+.header-search{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.header-desc{
+    width: 100%;
+    max-width: 1024px;
+    margin-bottom: 30px;
+    color: white;
+}
+.header-desc>button{
+    height: 40px;
+    padding: 10px;
+    border: none;
+    color: black;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+.header-search-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+    max-width: 1024px;
+    border: none;
+    border: 1px solid gold;
+    height: 50px;
+    align-items: center;
+    background-color: white;
+    padding: 10px 0px;
+    color: black;
+}
+.header-search-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-search-item>input{
+    border: none;
+    outline: none;
+    width: 200px;
+    cursor: pointer;
+}
+.header-search-item>input::placeholder{
+    font-weight: 500;
+    color: black;
+}
+.header-search-item>span{
+    cursor: pointer;
+}
+.header-search-button{
+    border: none;
+    height: 40px;
+    width: 90px;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.date{
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+}
+.options{
+    position: absolute;
+    top: 50px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    color: gray;
+    border-radius: 5px;
+}
+.option-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin: 10px;
+}
+.option-counter{
+    display: flex;
+    gap: 10px;
+}
+
+@media screen and (max-width : 790px) {
+    .header-search-container{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        background-color: gold;
+    }
+    .header-search-item{
+        background-color: white;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        margin: 0px 10px;
+    }
+    
+    .header-desc>button{
+        height: 30px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .header-desc>h2{
+        font-size: 16px;
+    }
+    .header-desc>p{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+}
