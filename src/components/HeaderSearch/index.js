@@ -9,12 +9,16 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css";
 import {useNavigate} from 'react-router-dom'
 import { Header } from '../Header';
+import { hotelLocations } from '../../data';
+import { IoLocation } from 'react-icons/io5';
 
 export const HeaderSearch = () => {
     const [openDate, setOpenDate] = useState(false)
+    const [locations, setlocations] = useState([])
     const navigate = useNavigate()
     const [openOptions, setOpenOptions] = useState(false)
     const [destination, setDestination] = useState('')
+    const [isSearchActive, setIsSearchActive] = useState(false) 
     const [options, setOptions] = useState({
         adult : 1, 
         children : 0,
@@ -36,23 +40,47 @@ export const HeaderSearch = () => {
         })
     }
 
+    const onSearchDestination = (e) => {
+        e.preventDefault()
+        setIsSearchActive(true)
+        setDestination(e.target.value)
+        const filteredHotels = hotelLocations.filter(each => each.toLowerCase().includes(e.target.value.toLowerCase()))
+        setlocations(filteredHotels)
+    }
+
+    const onlocationClick = (each) => {
+        setDestination(each)
+        setIsSearchActive(false)
+
+    }
+
     const handleSearch = () => {
         navigate('/hotels', {state : {destination, dates, options}})
     }
 
     return(
-        <div className='header-and-search'>
+        <div className='header-and-search' onClick={() => setIsSearchActive(false)}>
             <Header/>
             <div className='header-search'>
                 <div className='header-desc'>
                     <h2>Find Your Next Stay</h2>
                     <p>Search low prices on hotels, homes and much more...</p>
-                    <button>Signin/Register</button>
+                    <button onClick={() => navigate("/login")}>Signin/Register</button>
                 </div>
                 <div className = "header-search-container">
                     <div className = "header-search-item">
                         <FaBed/>
-                        <input type = "search" placeholder = "Enter the Destination" value={destination} onChange={(e) => setDestination(e.target.value)} />
+                        <input type = "search" placeholder = "Enter the Destination" value={destination} onChange={onSearchDestination} />
+                        {isSearchActive && <ul className='locations-search-container'>
+                            {
+                                locations.map(each => (
+                                    <div className='locations-search' onClick={() => onlocationClick(each)}>
+                                        <span><IoLocation/></span>
+                                        <span>{each}</span>
+                                    </div>
+                                ))
+                            }
+                        </ul>}
                     </div>
                     <div className = "header-search-item">
                         <CiCalendarDate/>

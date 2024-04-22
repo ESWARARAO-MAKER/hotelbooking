@@ -6,29 +6,55 @@ import { IoLocationSharp } from "react-icons/io5";
 import { CiParking1 } from "react-icons/ci";
 import Footer from '../../components/Footer';
 import { Email } from '../../components/Email';
+import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
+import { hotelImagesList } from '../../data';
+
 
 export const SingleHotelPage = () => {
     // const location = useLocation()
     // const [hotelData, setHotelData] = useState(location.state.each)
+    const [carouselImg, setCarouselImg] = useState(0)
+
+    const onLeftArrow = () => {
+        if (carouselImg === hotelImagesList.length -1){
+            setCarouselImg(0)
+        }
+        else{
+            setCarouselImg(carouselImg + 1)
+        }
+    }
+
+    const onRightArrow = () => {
+        if (carouselImg === 0){
+            setCarouselImg(hotelImagesList.length - 1)
+        }
+        else{
+            setCarouselImg(carouselImg - 1)
+        }
+    }
     
     return(
         <div className='single-hotel-page'>
             <Header/>
             <div className='single-hotel-container'>
-                <div className='single-hotel'>
-                    <div className='single-hotel-desc'>
+                <div className='single-hotel-desc'>
+                    <div className='single-desc'>
                         <h1>Hotel Taj</h1>
                         <small><IoLocationSharp/> Ameerpet, Hyderabad</small>
                         <span>Book a stay over $200 at this property and get a free airport taxi</span>
-                        <div className='best'>
-                            <h1>Best Hotel in the city</h1>
-                            <small>Hotel Description</small>
-                        </div>
-                        <div className='carosel'>
-                            <img src='https://cf.bstatic.com/xdata/images/hotel/max1024x768/533487379.jpg?k=48e58f84cf129585be9f315255209069e0ccd1b5f5e49667f80650eeec9e15e2&o=&hp=1' alt='img'/>
-                        </div>
+                    </div>
+                    <div className='best'>
+                        <h1>Best Hotel in the city</h1>
+                        <p>Hotel Description</p>
+                    </div>
+                    <div className='carosel'>
+                        <FaAngleLeft className='arrow' onClick={onLeftArrow} />
+                        <img src={hotelImagesList[carouselImg].img} alt='img'/>
+                        <FaAngleRight className='arrow' onClick={onRightArrow}/>
                     </div>
                 </div>
+                
                 <div className='property-heighlight-container'>
                     <button>Reserve or Book Now!</button>
                     <div className='property-heighlight'>

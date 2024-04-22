@@ -46,6 +46,30 @@
     align-items: center;
     gap: 10px;
 }
+.locations-search-container{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: fit-content;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    border-radius: 10px;
+    z-index: 10;
+    border: 1px solid black;
+}
+.locations-search{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
 .header-search-item>input{
     border: none;
     outline: none;
@@ -96,6 +120,10 @@
 }
 
 @media screen and (max-width : 790px) {
+    .locations-search-container{
+        top: 45px;
+        width: 80%;
+    }
     .header-search-container{
         display: flex;
         flex-direction: column;

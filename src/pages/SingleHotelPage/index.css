@@ -8,7 +8,6 @@
 .single-hotel-container{
     display: flex;
     justify-content: space-between;
-    gap: 10px;
     width: 100%;
     max-width: 1024px;
 }
@@ -19,23 +18,39 @@
     font-weight: 600;
     gap: 10px;
 }
+.best>p{
+    color: #006ce4;
+}
 .single-hotel-desc{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    height: 100%;
 }
-.single-hotel{
-    width: 50%;
+.carosel{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
-img{
-    height: 250px;
-    width: 450px;
+.carosel>img{
+    width: 70%;
+    height: 70%;
+}
+.arrow{
+    font-size: 30px;
+    padding: 10px;
+}
+.arrow:hover{
+    background-color: gray;
+    border-radius: 50%;
 }
 .property-heighlight-container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    margin: 5px;
 }
 .property-heighlight-container>button{
     height: 45px;
@@ -65,20 +80,27 @@ img{
     font-size: 14px;
     width: 130px;
 }
-.single-hotel-desc>small{
+.single-desc{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.single-hotel-desc>div>small{
     color: #006ce4;
 }
-.single-hotel-desc>span{
+.single-hotel-desc>div>span{
     color: green;
 }
 
-
 @media screen and (max-width : 790px) {
-    img{
-        width: 180px;
+    .arrow{
+        font-size: 20px;
     }
-    .single-hotel-desc{
-        margin: 10px;
+    .property-heighlight-container>button{
+        font-size: 12px;
+    }
+    .property-heighlight-container{
+        width: 100%;
     }
     h1{
         font-size: 16px;
@@ -86,13 +108,41 @@ img{
     span{
         font-size: 12px;
     }
+    .single-hotel-desc{
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width : 590px) {
+    .carosel{
+        gap: 3px;
+    }
+    .arrow{
+        padding: 3px;
+        font-size: 12px;
+    }
+    img{
+        width: 180px;
+    }
+    .single-hotel-desc{
+        margin: 10px;
+    }
     .property-heighlight-container{
         align-items: flex-end;
+    }
+    
+    .single-hotel-container{
+        margin: 10px;
+    }
+    .property-heighlight-container{
+        padding: 0px;
     }
     .property-heighlight-container>button{
         font-size: 12px;
     }
-    .single-hotel-container{
-        margin: 10px;
+    .property-heighlight>button{
+        padding: 5px;
+        font-size: 12px;
+        height: 30px;
     }
 }

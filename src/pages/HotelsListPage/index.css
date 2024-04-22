@@ -234,10 +234,20 @@
         margin: 10px;
     }
     .hotel-con>img{
-        height: 60%;
+        height: 50%;
         width: 100%;
     }
     .destination{
         margin: 0px 10px;
+    }
+    .hotel-desc>button{
+        width: 80px;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 5px;
+    }
+    .rev>button{
+        padding: 5px;
+        font-size: 12px;
     }
 }

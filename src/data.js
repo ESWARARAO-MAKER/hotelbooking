@@ -153,3 +153,43 @@ export const listOfHotels = [
     },
 
 ]
+
+export const hotelImagesList = [
+    {
+        img : "https://cf.bstatic.com/xdata/images/hotel/max1024x768/13125860.jpg?k=b5f4783a8a6ecf84738e080755acfebf943253d71f4458fbe2510a356cf3d8c8&o=&hp=1"
+    },
+    {
+        img : "https://cf.bstatic.com/xdata/images/hotel/max1024x768/336582317.jpg?k=29d57859ffc7bf7e673565e6d487a7acfff9ce4e9c3c6f13fc2a08c4e33b1f85&o=&hp=1"
+    },
+    {
+        img : "https://cf.bstatic.com/xdata/images/hotel/max1024x768/403985874.jpg?k=31a5cc4f6105dafecccc2bc60a804dc5e8b0360fd027e09ae3485e9a8944e49b&o=&hp=1"
+    },
+    {
+        img : "https://cf.bstatic.com/xdata/images/hotel/max1024x768/153937477.jpg?k=82a3e4a701d7d534b32ea6e96eaeecb466903e107b9bd07298abbf2f08024ff9&o=&hp=1"
+    },
+    {
+        img : "https://cf.bstatic.com/xdata/images/hotel/max1024x768/115648832.jpg?k=ad43d01c73b4866e7ad19068c6ef61b3ecb44c59f8d0862290fb9281e8eb2703&o=&hp=1"
+    }
+]
+
+export const hotelLocations = [
+    "Mumbai",
+    "New Delhi",
+    "Bengaluru (Bangalore)",
+    "Chennai",
+    "Kolkata",
+    "Hyderabad",
+    "Pune",
+    "Jaipur",
+    "Udaipur",
+    "Goa",
+    'Visakhapatnam',
+    "Vijayawada",
+    'Srikakulam',
+    'kakinada',
+    "Bhihar",
+    "Ananthapur",
+    "Kurnool",
+    'chittore',
+    'tirupathi',
+  ]

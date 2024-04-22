@@ -8,7 +8,6 @@ import { DateRange } from 'react-date-range'
 import {useLocation} from 'react-router-dom'
 import {Oval} from 'react-loader-spinner'
 import { listOfHotels } from '../../data'
-import { IoMdStarOutline } from "react-icons/io";
 import { AiTwotoneLike } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom'
 import { IoLocationOutline } from "react-icons/io5";
