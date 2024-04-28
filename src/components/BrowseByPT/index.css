@@ -5,7 +5,7 @@
 }
 .bpt-container{
     display: flex;
-    gap: 10px;
+    gap: 20px;
     overflow-x: scroll;
     scrollbar-width: none;
     width: 100%;
@@ -18,6 +18,17 @@
     gap: 5px;
     height: 200px;
     min-width: 200px;
+    background-color: white;
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 5px;
+    transition: transform 0.3s ease; 
+}
+.property-container:hover{
+    transform: scale(0.8);
+    cursor: pointer;
+    transform-origin: center;
+    box-shadow: 20px 20px 5px rgba(86, 85, 85, 0.2);
 }
 .property-container>img{
     width: 100%;

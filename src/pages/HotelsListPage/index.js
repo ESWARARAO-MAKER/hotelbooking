@@ -76,7 +76,7 @@ export const HotelsListPage = () => {
                                     <span>{each.reviews}reviews</span>
                                     <button>{each.rating}</button>
                                 </div>
-                                <button onClick={ () => onShowHotel(each, id)}>See Availability</button>
+                                <button className='availability-btn' onClick={ () => onShowHotel(each, id)}>See Availability</button>
                             </div>
                         </div>
                     </div>

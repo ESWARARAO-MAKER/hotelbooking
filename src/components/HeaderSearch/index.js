@@ -65,7 +65,7 @@ export const HeaderSearch = () => {
                 <div className='header-desc'>
                     <h2>Find Your Next Stay</h2>
                     <p>Search low prices on hotels, homes and much more...</p>
-                    <button onClick={() => navigate("/login")}>Signin/Register</button>
+                    <button className='sign-regi-btn' onClick={() => navigate("/login")}>Signin/Register</button>
                 </div>
                 <div className = "header-search-container">
                     <div className = "header-search-item">

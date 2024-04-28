@@ -91,6 +91,11 @@
     font-weight: 500;
     cursor: pointer;
 }
+.sign-regi-btn:hover{
+    color: white;
+    border: 1px solid white;
+    background-color: #0071c2;
+}
 .date{
     position: absolute;
     top: 50px;

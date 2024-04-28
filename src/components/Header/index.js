@@ -7,7 +7,7 @@ import { IoPersonCircle } from "react-icons/io5";
 
 export const Header = () => {
     const navigate = useNavigate()
-    const [isLoggedin, setIsLoggedin] = useState(true)
+    const [isLoggedin, setIsLoggedin] = useState(false)
 
     const goToHome = () => {
         navigate("/")
@@ -28,13 +28,13 @@ export const Header = () => {
             <nav className = "navbar">
                 <span className = "logo" onClick={goToHome}>B<span>OOK</span>ING</span>
                 {!isLoggedin && <div className = "nav-links">
-                    <button>Register</button>
-                    <button onClick={onLogin}>Login</button>
+                    <button className='btn'>Register</button>
+                    <button onClick={onLogin} className='btn'>Login</button>
                 </div>}
                 {isLoggedin &&
                     <div className = "nav-links">
                         <IoPersonCircle className='user'/>
-                        <button onClick={onLogout}>Logout</button>
+                        <button onClick={onLogout} className='btn'>Logout</button>
                     </div>
                 }
             </nav>
