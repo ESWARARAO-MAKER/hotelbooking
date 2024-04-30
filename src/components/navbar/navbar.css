@@ -28,16 +28,18 @@
   .navButton{
     margin-left: 20px;
     border: none;
+    border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
     color: #003580;
+    transition: transform 0.3s ease;
   }
   .login-username{
     color: white;
     font-size: 22px;
   }
   .navButton:hover{
-    scale: 1.2;
+    transform: scale(0.8);
   }
 
   @media screen and (max-width :767px) {

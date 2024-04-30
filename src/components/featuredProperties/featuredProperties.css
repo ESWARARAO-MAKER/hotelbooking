@@ -4,6 +4,8 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
   
   .fpItem{
@@ -11,6 +13,16 @@
     gap: 10px;
     display: flex;
     flex-direction: column;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 7px;
+    min-width: 250px;
+    height: 250px;
+    transition: transform 0.3s ease;
+  }
+  .fpItem:hover{
+    transform: scale(0.8);
   }
   
   .fpImg{

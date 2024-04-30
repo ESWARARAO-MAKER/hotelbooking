@@ -1,6 +1,6 @@
 .header {
     /* background-color: #003580; */
-    background-image: url("https://t3.ftcdn.net/jpg/00/86/56/12/360_F_86561234_8HJdzg2iBlPap18K38mbyetKfdw1oNrm.jpg");
+    background-color: #003580;
     background-size: cover;
     color: white;
     display: flex;
@@ -28,10 +28,16 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 7px;
+    transition: transform 0.3s ease;
+    min-width: 110px;
   }
   .headerListItem:hover{
     cursor: pointer;
-    scale: 1.2;
+    transform: scale(0.8);
   }
   
   .headerListItem.active {
@@ -58,9 +64,10 @@
     border-radius: 5px;
     font-size: 16px;
     border: 1px solid #0071c2;
+    transition: transform 0.3s ease;
   }
   .headerBtn:hover{
-    scale: 1.2;
+    transform: scale(0.8);
   }
   
   .headerSearch {
@@ -162,10 +169,11 @@
       scrollbar-width: none;
       scroll-behavior: smooth;
       margin-bottom: 10px;
+      gap: 10px;
     }
     .headerListItem{
-      margin: 10px;
-      gap: 2px;
+      gap: 5px;
+      margin: 0px 5px;
     }
     .headerDesc{
       margin: 10px;

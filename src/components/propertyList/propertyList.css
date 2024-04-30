@@ -2,15 +2,23 @@
     width: 100%;
     max-width: 1024px;
     display: flex;
-    justify-content: space-between;
+    overflow-x: auto;
+    scrollbar-width: none;
     gap: 20px;
   }
   
   .pListItem{
-    flex:1;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 10px;
+    min-width: 250px;
+    transition: transform 0.3s ease;
+  }
+  .pListItem:hover{
+    transform: scale(0.8);
   }
   
   .pListImg{
