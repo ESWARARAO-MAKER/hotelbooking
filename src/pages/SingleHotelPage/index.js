@@ -12,6 +12,7 @@ import { AuthContext } from "../../context/AuthContext";
 import Footer from "../../components/Footer";
 import Reserve from "../../components/reserve";
 import { hotelImagesList } from "../../data";
+import { Loading } from "../../components/Loading";
 
 export const SingleHotelPage = () => {
   const location = useLocation();
@@ -64,7 +65,7 @@ export const SingleHotelPage = () => {
     <div>
       <Header type="list" />
       {loading ? (
-        "loading"
+        <Loading/>
       ) : (
         <div className="hotelContainer">
           {open && (
