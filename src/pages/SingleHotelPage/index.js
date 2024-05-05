@@ -65,7 +65,9 @@ export const SingleHotelPage = () => {
     <div>
       <Header type="list" />
       {loading ? (
-        <Loading/>
+        <div className="load">
+          <Loading/>
+        </div>
       ) : (
         <div className="hotelContainer">
           {open && (
