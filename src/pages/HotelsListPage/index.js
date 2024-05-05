@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState} from 'react'
 import { Header } from '../../components/Header'
 import {format}from 'date-fns'
 import './index.css'
@@ -7,12 +7,10 @@ import "react-date-range/dist/theme/default.css";
 import { DateRange } from 'react-date-range'
 import {useLocation} from 'react-router-dom'
 import {Oval} from 'react-loader-spinner'
-import { listOfHotels } from '../../data'
-import { AiTwotoneLike } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom'
-import { IoLocationOutline } from "react-icons/io5";
 import { CiCalendar } from "react-icons/ci";
-import { IoPerson } from "react-icons/io5";
+import { useFetch } from '../../hooks/useFetch';
+import SearchItem from '../../components/ListItem';
 
 
 export const HotelsListPage = () => {
@@ -25,10 +23,15 @@ export const HotelsListPage = () => {
     const [min, setMin] = useState(undefined)
     const [max, setMax] = useState(undefined)
     const navigate = useNavigate()
-    const [openOptions, setOpenOptions] = useState(false)
+
+    const { data, loading, error, reFetch } = useFetch(
+        `https://hotelbooking-q4vk.onrender.com/api/hotels?city=${destination}&min=${min || 0 }&max=${max || 999}`
+      );
+
+    console.log(data)
 
     const handleClick = () => {
-        
+        reFetch();
     }
 
     const handleOption = (name, operation) => {
@@ -39,9 +42,9 @@ export const HotelsListPage = () => {
         })
     }
 
-    const onShowHotel = (each, id) => {
-        navigate(`/hotel/${id}`, {state : {each,}})
-    }
+    // const onShowHotel = (each, id) => {
+    //     navigate(`/hotel/${id}`, {state : {each,}})
+    // }
 
     const renderLoadingView = () => (
         <div className='loading'>
@@ -60,30 +63,13 @@ export const HotelsListPage = () => {
     const renderHotelsListView = () => (
         <div className='list-of-hotels'>
             {
-                listOfHotels.map((each, id) => (
-                    <div className='hotel-con'>
-                        <img src={each.img} alt='img'/>
-                        <div>
-                            <div className='hotel-desc'>
-                                <span className='hotel-name'>{each.name}</span>
-                                <span className='like'><AiTwotoneLike/></span>
-                                <span>{each.place}</span>
-                                <span className='desc'>{each.desc}</span>
-                            </div>
-                            <div className='hotel-desc hotel-review-rating'>
-                                <div className='rev'>
-                                    <span className='type'>{each.type}</span>
-                                    <span>{each.reviews}reviews</span>
-                                    <button>{each.rating}</button>
-                                </div>
-                                <button className='availability-btn' onClick={ () => onShowHotel(each, id)}>See Availability</button>
-                            </div>
-                        </div>
-                    </div>
+                data.map((item, id) => (
+                    <SearchItem item={item} key={item._id} id = {id}/>
                 ))
             }
         </div>
     )
+
 
     return(
         <div className = "hotels-list-page">
@@ -95,18 +81,6 @@ export const HotelsListPage = () => {
                         <div className='hotels-destination'>
                             <span>Destination</span>
                             <input type = "text" placeholder={destination} />
-                        </div>
-                        <div className='hotels-destination'>
-                            <span>Checkin Date</span>
-                            <span className='hotels-date' onClick={() => setOpenDate(!openDate)}>{`${format(dates[0].startDate, "MM/dd/yyyy")} to ${format(dates[0].endDate, "MM/dd/yyyy")}`}</span>
-                            {
-                                openDate && (
-                                    <DateRange onChange={item => setDates([item.selection])}
-                                    minDate={new Date()}
-                                    ranges={dates}
-                                    />
-                                )
-                            }
                         </div>
                     </div>
                     <div className='hotels-search-options'>
@@ -147,29 +121,14 @@ export const HotelsListPage = () => {
                     </div>
                 </div> */}
                 <div className='hotels-search-container'>
-                    <div className='destination'>
+                    {/* <div className='destination'>
                         <IoLocationOutline/>
                         <div className='destination-name'>
-                            <small>Search Places, hotels and more...</small>
-                            <span><b>{destination}</b></span>
+                            <input type='text' placeholder={destination} onChange={(e) => setDestination(e.target.value)}/>
                         </div>
-                    </div>
-                    <div className='destination'>
-                        <CiCalendar/>
-                        <div className='date-range'>
-                            <small>Checkin Date</small>
-                            <span className='hotels-date' onClick={() => setOpenDate(!openDate)}>{`${format(dates[0].startDate, "MM/dd/yyyy")} to ${format(dates[0].endDate, "MM/dd/yyyy")}`}</span>
-                            {
-                                openDate && (
-                                    <DateRange onChange={item => setDates([item.selection])}
-                                    minDate={new Date()}
-                                    ranges={dates}
-                                    className='date-open'/>
-                                )
-                            }
-                        </div>
-                    </div>
-                    <div className='destination options-con'>
+                    </div> */}
+                    
+                    {/* <div className='destination options-con'>
                         <IoPerson/>
                         <div className='destination-name'>
                             <small>Travellers</small>
@@ -205,7 +164,85 @@ export const HotelsListPage = () => {
                                 </div>
                             )
                         }
-                    </div>
+                    </div> */}
+                     <div className='destination'>
+                            <CiCalendar/>
+                            <div className='date-range'>
+                                <small>Checkin Date</small>
+                                <span className='hotels-date' onClick={()=>setOpenDate(!openDate)}>{`${format(dates[0].startDate, "MM/dd/yyyy")} to ${format(dates[0].endDate, "MM/dd/yyyy")}`}</span>
+                                {
+                                    openDate && (
+                                        <DateRange onChange={(item) => setDates([item.selection])}
+                                        minDate={new Date()}
+                                        ranges={dates}
+                                        className='date-open'/>
+                                    )
+                                }
+                            </div>
+                        </div>
+                    <div className='opContainer'>
+                        {/* <div className='filters'>
+                            <BsFilterRight className='filter'/>
+                            <select>
+                                <option value = "price">price</option>
+                                <option value="rating">rating</option>
+                            </select>
+                        </div> */}
+                       
+                        <div className="lsOptions">
+                            <div className="lsOptionItem">
+                                <span>Destination</span>
+                                <input placeholder={destination} type="text" onChange={(e) => setDestination(e.target.value)} />
+                            </div>
+                            <div className="lsOptionItem">
+                                <span className="lsOptionText">
+                                    Min price per night
+                                </span>
+                                <input
+                                    type="number"
+                                    onChange={(e) => setMin(e.target.value)}
+                                    className="lsOptionInput"
+                                />
+                            </div>
+                            <div className="lsOptionItem">
+                                <span className="lsOptionText">
+                                    Max price per night
+                                </span>
+                                <input
+                                    type="number"
+                                    onChange={(e) => setMax(e.target.value)}
+                                    className="lsOptionInput"
+                                />
+                            </div>
+                            <div className="lsOptionItem">
+                                <span className="lsOptionText">Adult</span>
+                                <input
+                                    type="number"
+                                    min={1}
+                                    className="lsOptionInput"
+                                    placeholder={options.adult}
+                                />
+                            </div>
+                            <div className="lsOptionItem">
+                                <span className="lsOptionText">Children</span>
+                                <input
+                                    type="number"
+                                    min={0}
+                                    className="lsOptionInput"
+                                    placeholder={options.children}
+                                />
+                            </div>
+                            <div className="lsOptionItem">
+                                <span className="lsOptionText">Room</span>
+                                <input
+                                    type="number"
+                                    min={1}
+                                    className="lsOptionInput"
+                                    placeholder={options.room}
+                                />
+                            </div>
+                        </div>
+                    </div>               
                 </div>
                 <div className='hotels-list-container'>
                     {isLoading ? renderLoadingView() : renderHotelsListView()}

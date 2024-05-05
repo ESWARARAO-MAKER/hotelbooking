@@ -1,13 +1,13 @@
 import './index.css'
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import { FaBed, FaCar, FaPlane, FaTaxi } from "react-icons/fa";
 import { MdAttractions } from "react-icons/md";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { IoPersonCircle } from "react-icons/io5";
+import { AuthContext } from '../../context/AuthContext';
 
 export const Header = () => {
     const navigate = useNavigate()
-    const [isLoggedin, setIsLoggedin] = useState(false)
 
     const goToHome = () => {
         navigate("/")
@@ -18,20 +18,23 @@ export const Header = () => {
     }
 
     const onLogout = () => {
-        setIsLoggedin(false)
+        localStorage.removeItem("user");
         navigate("/login")
     }
+
+    const {user} = useContext(AuthContext)
+    console.log(user)
 
 
     return(
         <div className = "header">
             <nav className = "navbar">
                 <span className = "logo" onClick={goToHome}>B<span>OOK</span>ING</span>
-                {!isLoggedin && <div className = "nav-links">
+                {!user && <div className = "nav-links">
                     <button className='btn'>Register</button>
                     <button onClick={onLogin} className='btn'>Login</button>
                 </div>}
-                {isLoggedin &&
+                {user &&
                     <div className = "nav-links">
                         <IoPersonCircle className='user'/>
                         <button onClick={onLogout} className='btn'>Logout</button>
@@ -39,11 +42,11 @@ export const Header = () => {
                 }
             </nav>
             <div className = "services">
-                <button className = "service-button" id='active'><FaBed/> Stays</button>
-                <button className = "service-button"><FaPlane/> Flights</button>
-                <button className = "service-button"><FaCar/> Car rentals</button>
-                <button className = "service-button"><MdAttractions/> Attractions</button>
-                <button className = "service-button"><FaTaxi/> Airport taxies</button>
+                <Link to="/" className='link'><button className = "service-button" id='active'><FaBed/> Stays</button></Link>
+                <Link to='/inProgress' className='link'><button className = "service-button"><FaPlane/> Flights</button></Link>
+                <Link to="/inProgress" className='link'><button className = "service-button"><FaCar/> Car rentals</button></Link>
+                <Link to="/inProgress" className='link'><button className = "service-button"><MdAttractions/> Attractions</button></Link>
+                <Link to="/inProgress" className='link'><button className = "service-button"><FaTaxi/> Airport taxies</button></Link>
             </div>
         </div>
     )

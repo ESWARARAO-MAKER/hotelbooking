@@ -4,6 +4,7 @@ import { HomePage } from './pages/HomePage';
 import { HotelsListPage } from './pages/HotelsListPage';
 import { SingleHotelPage } from './pages/SingleHotelPage';
 import { LoginRegisterPage } from './pages/LoginRegisterPage';
+import Progress from './components/notFound';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route exact path = "/" Component = {HomePage}/>
           <Route exact path = '/hotels' Component={HotelsListPage}/>
           <Route exact path = "/hotel/:id" Component={SingleHotelPage}/>
+          <Route exact path='/inProgress' Component={Progress}/>
         </Routes>
       </BrowserRouter>
     </>

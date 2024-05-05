@@ -35,6 +35,9 @@
     font-size: 40px;
     cursor: pointer;
 }
+.link{
+    text-decoration: none;
+}
 .nav-links>button{
     border: none;
     height: 30px;

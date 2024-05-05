@@ -1,38 +1,35 @@
 export const TrendingCitiesData = [
     {
-        img : 'https://cf.bstatic.com/xdata/images/xphoto/300x240/140018284.jpg?k=1461bebf1c99cab9ba48eeeaab97c403d93930c4a9d7aa5f91a47d55fd449122&o=',
-        place : 'Hampi',
-        propertyCount : 5,
-    },
-    {
-        img : 'https://cf.bstatic.com/xdata/images/xphoto/300x240/140018349.jpg?k=8ab6c3981c3e3b11e3746c51dccec1d15b420f2cf8b458c130eb88f9a14c8121&o=',
-        place : 'Aurangabad',
-        propertyCount : 5,
+        img : 'https://cf.bstatic.com/xdata/images/xphoto/300x240/140018267.jpg?k=1490379e254d86584e062afb13393830c21737a6d6a0a50371011ce55cac64ee&o=',
+        place : 'Vijayawada',
     },
     {
         img : 'https://cf.bstatic.com/xdata/images/xphoto/300x240/140018279.jpg?k=322b8966b6fc3265f01dc0960bf7934c59a86965f33aae0389a497850c619e8c&o=',
         place : 'Hyderabad',
-        propertyCount : 5,
+    },
+    {
+        img : 'https://static.theprint.in/wp-content/uploads/2024/04/visag-signage-1024x768.jpg',
+        place : 'Vizag',
+    },
+    {
+        img : 'https://cf.bstatic.com/xdata/images/xphoto/300x240/140018284.jpg?k=1461bebf1c99cab9ba48eeeaab97c403d93930c4a9d7aa5f91a47d55fd449122&o=',
+        place : 'Hampi',
+    },
+    {
+        img : 'https://cf.bstatic.com/xdata/images/xphoto/300x240/140018349.jpg?k=8ab6c3981c3e3b11e3746c51dccec1d15b420f2cf8b458c130eb88f9a14c8121&o=',
+        place : 'Aurangabad',
     },
     {
         img : 'https://cf.bstatic.com/xdata/images/xphoto/300x240/140018346.jpg?k=1e9970b2bd40b172dfb04f8211c492c5581a40877ed96f16e8332448d3c16e65&o=',
         place : 'Bangalore',
-        propertyCount : 5,
-    },
-    {
-        img : 'https://cf.bstatic.com/xdata/images/xphoto/300x240/140018267.jpg?k=1490379e254d86584e062afb13393830c21737a6d6a0a50371011ce55cac64ee&o=',
-        place : 'Vijayawada',
-        propertyCount : 5,
     },
     {
         img : 'https://cf.bstatic.com/xdata/images/xphoto/300x240/140018281.jpg?k=cca5e4d83c39b30620bed9bfda5a9cd6bfc750bff57b2dac6d88bfd94b2b34c9&o=',
         place : 'Hospet',
-        propertyCount : 5,
     },
     {
         img : 'https://cf.bstatic.com/xdata/images/xphoto/300x240/140018215.jpg?k=a7e3a19c5810cc3085c669894a09ff20bdca3d872f9b5bdc29ff3c07af7b0c72&o=',
         place : 'Mysore',
-        propertyCount : 5,
     },
     
 ]
@@ -166,6 +163,9 @@ export const hotelImagesList = [
     },
     {
         img : "https://cf.bstatic.com/xdata/images/hotel/max1024x768/153937477.jpg?k=82a3e4a701d7d534b32ea6e96eaeecb466903e107b9bd07298abbf2f08024ff9&o=&hp=1"
+    },
+    {
+        img : "https://cf.bstatic.com/xdata/images/hotel/max1024x768/115648832.jpg?k=ad43d01c73b4866e7ad19068c6ef61b3ecb44c59f8d0862290fb9281e8eb2703&o=&hp=1"
     },
     {
         img : "https://cf.bstatic.com/xdata/images/hotel/max1024x768/115648832.jpg?k=ad43d01c73b4866e7ad19068c6ef61b3ecb44c59f8d0862290fb9281e8eb2703&o=&hp=1"

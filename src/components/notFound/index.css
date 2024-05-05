@@ -1,0 +1,28 @@
+.container-working{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.working-img{
+    height: 100%;
+    max-height: 450px;
+    width: 100%;
+    max-width: 650px;
+}
+.para-working{
+    font-family: "Roboto";
+    font-weight: 600;
+    text-align: center;
+    margin: 30px;
+    font-size: 24px;
+}
+.working-btn{
+    height: 40px;
+    width: 120px;
+    border: 1px solid #0071c2;
+    color: #0071c2;
+    background-color: transparent;
+    border-radius: 5px;
+}

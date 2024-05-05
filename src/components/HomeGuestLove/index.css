@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    min-width: 200px;
+    min-width: 250px;
     height: fit-content;
     box-sizing: border-box;
     padding: 5px;
@@ -32,7 +32,7 @@
     box-shadow: 20px 20px 5px rgba(86, 85, 85, 0.2);
 }
 .home-guest-card>img{
-    height: 100%;
+    height: 150px;
     width: 100%;
 }
 .home-guest-desc{
@@ -55,13 +55,13 @@
 
 @media screen and (max-width : 790px) {
     .home-guest-card{
-        width: 150px;
+        max-width: 220px;
         height: fit-content;
     }
     .home-guest-desc>span, .home-guest-desc>div>span{
         font-size: 12px;
     }
     .home-guest-card{
-        min-width: 150px;
+        min-width: 170px;
     }
 }

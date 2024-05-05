@@ -23,22 +23,43 @@
 }
 .destination{
     border: 1px solid black;
+    box-sizing: border-box;
     padding: 10px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    height: fit-content;
+    min-width: 250px;
 }
-.destination:hover{
+/* .destination:hover{
     background-color: white;
     border: none;
-}
+} */
 .destination-name, .date-range{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+/* .destination-name>input{
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 7px;
+    height: 44px;
+}
+.destination-name>input::placeholder{
+    padding-left: 10px;
+} */
+.opContainer{
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 7px;
 }
 .date-range{
     position: relative;
@@ -47,31 +68,61 @@
     position: absolute;
     top: 60px;
     left: 0px;
+    z-index: 3;
+    height: fit-content;
 }
-.options-con{
+/* .options-con{
     position: relative;
 }
 .options{
     position: absolute;
     top: 70px;
+} */
+
+.filters{
+    display: flex;
+    gap: 10px;
+}
+.filter{
+    font-size: 25px;
+}
+.filters>select{
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    font-size: 16px;
+}
+.lsOptions{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.lsOptionItem{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* border: 1px solid black;
+    box-sizing: border-box;
+    padding: 5px; */
+}
+.lsOptionItem>input{
+    height :25px
 }
 .hotels-list-container{
     width: 100%;
-    height: 100vh;
     padding: 0px;
     margin: 0px;
 }
-.list-of-hotels{
+/* .list-of-hotels{
     height: 100%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 0px;
     gap: 10px;
-    overflow-y: scroll;
-    scrollbar-width: none;
-}
+} */
+/*
 .loading{
     display: flex;
     justify-content: center;
@@ -83,10 +134,10 @@
     justify-content: flex-start;
     height: 370px;
     width: 46%;
-    margin: 10px;
+    margin: 10px 0px;
     box-sizing: border-box;
     padding: 10px;
-    background-color: white;
+    background-color: #f2f9fc;
     transition: transform 0.3s ease;
 }
 .hotel-con:hover{
@@ -154,7 +205,7 @@
     color: #003b95;
     border: 1px solid #003b95;
     background-color: white;
-}
+} */
 
 @media screen and (max-width : 790px) {
     .hotels-and-search-container{
@@ -162,9 +213,6 @@
         flex-direction: column;
     }
     .hotels-list-container{
-        width: 100%;
-    }
-    .hotels-search-container{
         width: 100%;
     }
     .hotel-destination-date-container{
@@ -175,6 +223,7 @@
     .hotels-search-container{
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
         width: 100%;
         max-width: 1024px;
@@ -184,11 +233,17 @@
         margin: 10px;
     }
     .destination{
-        margin: 0px 30px;
+        width: 90%;
+    }
+    .opContainer{
+        width: 90%;
     }
 }
 @media screen and (max-width:570px) {
-    .hotel-con{
+    .destination{
+        margin: 0px 10px;
+    }
+    /* .hotel-con{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -200,9 +255,6 @@
         height: 50%;
         width: 100%;
     }
-    .destination{
-        margin: 0px 10px;
-    }
     .hotel-desc>button{
         width: 80px;
         font-size: 11px;
@@ -212,5 +264,5 @@
     .rev>button{
         padding: 5px;
         font-size: 12px;
-    }
+    } */
 }

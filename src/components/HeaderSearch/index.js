@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './index.css'
 import {format} from 'date-fns'
 import { FaBed } from "react-icons/fa";
@@ -11,6 +11,7 @@ import {useNavigate} from 'react-router-dom'
 import { Header } from '../Header';
 import { hotelLocations } from '../../data';
 import { IoLocation } from 'react-icons/io5';
+import { SearchContext } from '../../context/SearchContext';
 
 export const HeaderSearch = () => {
     const [openDate, setOpenDate] = useState(false)
@@ -54,7 +55,10 @@ export const HeaderSearch = () => {
 
     }
 
+    const {dispatch} = useContext(SearchContext);
+
     const handleSearch = () => {
+        dispatch({type : "NEW_SEARCH", payload : {destination, dates, options}})
         navigate('/hotels', {state : {destination, dates, options}})
     }
 
