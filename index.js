@@ -10,6 +10,8 @@ import cors from "cors";
 
 const app = express();
 dotenv.config();
+const port = process.env.PORT || 4000;
+
 
 const connect = async () => {
   try {
@@ -45,7 +47,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(8800, () => {
+app.listen(port, () => {
   connect();
   console.log("Connected to backend.");
 });
