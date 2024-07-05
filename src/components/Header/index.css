@@ -46,11 +46,13 @@
     border-radius: 5px;
     cursor: pointer;
     color: #003b95;
+    transition: transform 1s ease;
 }
 .btn:hover{
     background-color: #0071c2;
     color: white;
     border: 1px solid white;
+    transform: scale(0.8);
 }
 .services{
     width: 100%;
@@ -81,6 +83,7 @@
     font-weight: 600;
     background-color: transparent;
     cursor: pointer;
+    transition: transform 1s ease;
 }
 .service-button:hover{
     transform: scale(0.8);

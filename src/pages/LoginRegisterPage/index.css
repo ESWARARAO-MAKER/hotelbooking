@@ -21,7 +21,7 @@
     display: flex;
     justify-content: center;
     align-items:center;
-    backdrop-filter: blur(25px);
+    /* backdrop-filter: blur(25px); */
 }
 .login-name{
     font-size: 30px;
@@ -93,7 +93,9 @@
     font-size: 1em;
     color: #000;
     font-weight: 500;
+    
 }
+
 .registration-link{
     color: #000;
     font-size: .9em;

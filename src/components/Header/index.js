@@ -2,7 +2,7 @@ import './index.css'
 import {Link, useNavigate} from 'react-router-dom'
 import { FaBed, FaCar, FaPlane, FaTaxi } from "react-icons/fa";
 import { MdAttractions } from "react-icons/md";
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { IoPersonCircle } from "react-icons/io5";
 import { AuthContext } from '../../context/AuthContext';
 
